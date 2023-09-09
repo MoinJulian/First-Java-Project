@@ -1,11 +1,20 @@
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.Scanner;
+
 
 public class GuessNumber {
     static Integer myNumber = ThreadLocalRandom.current().nextInt(0, 100 + 1);
 
     public static void main(String[] args) {
-        guess(41);
-        guess(42);
+        nextRound();
+    }
+
+    public static void nextRound() {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Please enter a number!");
+            Integer number = scanner.nextInt();
+            guess(number);
+        }
     }
 
     public static void guess(Integer num) {
