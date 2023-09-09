@@ -28,6 +28,7 @@ public class GuessNumber {
             } else {
                 System.out.println("Your number is to big");
             }
+            nextRound();
         }
     }
 }
