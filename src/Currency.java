@@ -1,10 +1,14 @@
+import java.util.Scanner;
+
 public class Currency {
     public static void main(String[] args) {
-        Double money = (double) 10;
+        try (Scanner scanner = new Scanner(System.in)) {
+            Double money = scanner.nextDouble();
 
-        ConvertToDollars(money);
-        ConvertToPounds(money);
-        ConvertToYen(money);
+            ConvertToDollars(money);
+            ConvertToPounds(money);
+            ConvertToYen(money);
+        }
     }
 
     public static void ConvertToDollars(Double eur) {
@@ -16,6 +20,6 @@ public class Currency {
     }
 
         public static void ConvertToYen(Double eur) {
-        System.out.println(eur * 158.34 + "Yen");
+        System.out.println(eur * 158.34 + " Yen");
     }
 }
