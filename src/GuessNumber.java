@@ -1,5 +1,7 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public class GuessNumber {
-    static Integer myNumber = 42;
+    static Integer myNumber = ThreadLocalRandom.current().nextInt(0, 100 + 1);
 
     public static void main(String[] args) {
         guess(41);
