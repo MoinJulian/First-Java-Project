@@ -13,6 +13,12 @@ public class GuessNumber {
             System.out.println("Guessed Correct!");
         }else {
             System.out.println("Guessed wrong!");
+
+            if (num < myNumber) {
+                System.out.println("Your number is to small");
+            } else {
+                System.out.println("Your number is to big");
+            }
         }
     }
 }
